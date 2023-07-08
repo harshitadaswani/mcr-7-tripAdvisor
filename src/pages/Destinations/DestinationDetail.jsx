@@ -18,20 +18,39 @@ export const DestinationDetail = () => {
     website,
   } = getDetails(country.destinations, destinationName);
   return (
-    <div>
-      <h1>{name}</h1>
-      <img src={image} alt={name} />
-      <p>{description}</p>
-      <p>Ratings: {ratings}</p>
-      <p>Reviews: {reviews}</p>
-      <p>Location: {location}</p>
-      <p>Opening Hours: {openingHours}</p>
-      <p>Ticket Price: {ticketPrice}</p>
-      <p>
-        <a href={website} target="_blank" rel="noreferrer">
-          Website
-        </a>
-      </p>
+    <div className="align-left">
+      <h1 className="align-center">{name}</h1>
+      <div className="flex-2 padding">
+        <img src={image} alt={name} />
+        <div className="">
+          <p>
+            <span className="bold purple-color">Description:</span>{" "}
+            {description}
+          </p>
+          <p>
+            <span className="bold purple-color">Ratings:</span> {ratings}
+          </p>
+          <p>
+            <span className="bold purple-color">Reviews:</span> {reviews}
+          </p>
+          <p>
+            <span className="bold purple-color">Location:</span> {location}
+          </p>
+          <p>
+            <span className="bold purple-color">Opening Hours:</span>{" "}
+            {openingHours}
+          </p>
+          <p>
+            <span className="bold purple-color">Ticket Price:</span>{" "}
+            {ticketPrice}
+          </p>
+          <p>
+            <a href={website} target="_blank" rel="noreferrer">
+              Website
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-// import App from "../App";
+import App from "../App";
 import {
   Error,
-  ContinentCategory,
   CountryCategory,
   DestinationCategory,
   DestinationDetail,
@@ -11,7 +10,7 @@ import {
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <ContinentCategory/>,
+    element: <App />,
   },
   {
     path: "*",

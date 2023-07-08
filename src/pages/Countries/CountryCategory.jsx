@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { data } from "../../data/data";
-import Stack from "@mui/joy/Stack";
 import CardComponent from "../../components/Card";
 import { getDetails } from "../../utils/utilFunctions";
 
@@ -10,15 +9,8 @@ export const CountryCategory = () => {
   const continent = getDetails(continents, continentName);
   return (
     <div>
-      <h1>Top Countries in {continent.name} for your next holiday</h1>
-      <Stack
-        //   direction="row"
-        //   spacing={10}
-        direction={{ xs: "column", sm: "row" }}
-        spacing={{ xs: 0, sm: 2, md: 4 }}
-        // spacing={2}
-        flexWrap="wrap"
-      >
+      <h2>Top Countries in {continent.name} for your next holiday</h2>
+      <div className="flex">
         {continent.countries.map((country) => (
           <div key={country.id}>
             <Link to={`/${continentName}/${country.name}`}>
@@ -26,7 +18,7 @@ export const CountryCategory = () => {
             </Link>
           </div>
         ))}
-      </Stack>
+      </div>
     </div>
   );
 };
