@@ -21,7 +21,7 @@ export const CountryCategory = () => {
       >
         {continent.countries.map((country) => (
           <div key={country.id}>
-            <Link to={`/continents/${continentName}/${country.name}`}>
+            <Link to={`/${continentName}/${country.name}`}>
               <CardComponent {...country} />
             </Link>
           </div>

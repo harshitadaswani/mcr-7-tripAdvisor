@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
+// import App from "../App";
 import {
   Error,
   ContinentCategory,
@@ -11,26 +11,22 @@ import {
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <ContinentCategory/>,
   },
   {
     path: "*",
     element: <Error />,
   },
   {
-    path: "/continents",
-    element: <ContinentCategory />,
-  },
-  {
-    path: "/continents/:continentName",
+    path: "/:continentName",
     element: <CountryCategory />,
   },
   {
-    path: "/continents/:continentName/:countryName",
+    path: "/:continentName/:countryName",
     element: <DestinationCategory />,
   },
   {
-    path: "/continents/:continentName/:countryName/:destinationName",
+    path: "/:continentName/:countryName/:destinationName",
     element: <DestinationDetail />,
   },
 ]);
